@@ -6,7 +6,7 @@ public class DependComp {
 
     int minSdkVersion = 16
     int targetSdkVersion = 27
-    String supportVersion = '27.0.0'
+    String supportVersion = '27.0.2'
 
     def support_v4() {
         return support_v4(supportVersion)

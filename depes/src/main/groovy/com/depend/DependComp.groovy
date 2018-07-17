@@ -2,11 +2,13 @@ package com.depend
 
 public class DependComp {
     int compileSdkVersion = 27
-    String buildToolsVersion = '27.0.0'
+    String buildToolsVersion = '27.0.3'
 
     int minSdkVersion = 16
     int targetSdkVersion = 27
     String supportVersion = '27.0.2'
+
+    String lifecycleVersion = '1.1.1'
 
     def support_v4() {
         return support_v4(supportVersion)
@@ -198,6 +200,14 @@ public class DependComp {
 
     def retrofit_scalars(String version) {
         return "com.squareup.retrofit2:converter-scalars:${version}"
+    }
+
+    def retrofit_rxjava2_adapter() {
+        return retrofit_rxjava2_adapter('latest.release')
+    }
+
+    def retrofit_rxjava2_adapter(String version) {
+        return "com.squareup.retrofit2:adapter-rxjava2:${version}"
     }
 
     /**
@@ -426,5 +436,59 @@ public class DependComp {
 
     def mta_visual(String version) {
         return "com.qq.visual:visual:${version}"
+    }
+
+    /**
+     * lifeCircle 插件集合
+     */
+    def lifecycle_runtime() {
+        return lifecycle_runtime(lifecycleVersion)
+    }
+
+    def lifecycle_runtime(String version) {
+        return "android.arch.lifecycle:runtime:${version}"
+    }
+
+    def lifecycle_compiler() {
+        return lifecycle_compiler(lifecycleVersion)
+    }
+
+    def lifecycle_compiler(String version) {
+        return "android.arch.lifecycle:compiler:${version}"
+    }
+
+    def lifecycle_common_java() {
+        return lifecycle_compiler(lifecycleVersion)
+    }
+
+    def lifecycle_common_java(String version) {
+        return "android.arch.lifecycle:common-java8:${version}"
+    }
+
+    /**
+     * LiveData 、Model
+     */
+    def lifecycle_extensions() {
+        return lifecycle_compiler(lifecycleVersion)
+    }
+
+    def lifecycle_extensions(String version) {
+        return "android.arch.lifecycle:extensions:${version}"
+    }
+
+    def lifecycle_core_testing() {
+        return lifecycle_compiler(lifecycleVersion)
+    }
+
+    def lifecycle_core_testing(String version) {
+        return "android.arch.core:core-testing:${version}"
+    }
+
+    def lifecycle_reactivestreams() {
+        return lifecycle_compiler(lifecycleVersion)
+    }
+
+    def lifecycle_reactivestreams(String version) {
+        return "android.arch.lifecycle:reactivestreams:${version}"
     }
 }

@@ -15,7 +15,7 @@ repositories {
 /** 以下开始是将Android Library上传到jcenter的相关配置**/
 
 // 版本号，下次更新是只需要更改版本号即可
-version = "1.0"
+version = "1.0.2"
 group = "com.depend" //一般填你唯一的包名
 
 // 应用插件
